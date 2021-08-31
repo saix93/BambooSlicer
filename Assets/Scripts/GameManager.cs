@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
 
     private BambooStick SpawnNewBambooStick()
     {
-        return Spawner.SpawnBambooStick();
+        return Spawner.SpawnBambooStick(xOffset);
     }
 
     public void Retry()

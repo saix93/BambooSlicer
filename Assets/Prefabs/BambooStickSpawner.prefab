@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4068455105463985589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4068455105463985590}
+  - component: {fileID: 4068455105463985591}
+  m_Layer: 0
+  m_Name: BambooStickSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4068455105463985590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068455105463985589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4068455105463985591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068455105463985589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c95911666cdfd3c45a46eae0c5eac72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BambooStickPrefab: {fileID: 8630129268152427146, guid: c7d3858572af15d43875d7f2e973ffad, type: 3}
+  BambooStemPrefab: {fileID: 4016504395034396672, guid: 1e086d79ef5d1b94fa14f091340dc74a, type: 3}
+  BambooSeamPrefab: {fileID: 7079784370709811374, guid: ec224fe472239f14aabceb9fbf9a89df, type: 3}
+  CutTargetPrefab: {fileID: 6482566498247213495, guid: 4cde0434c63e8b0498122c8d2d95584a, type: 3}
+  NumberOfSeams: 5
+  MinDistanceBetweenSeams: 1
+  NumberOfLeavesPerSide: 2
+  LeafSpawnAngleMinMax: {x: 60, y: 80}
+  leafOffsetY: 2.75
+  SpreadOfLeaves: 1
+  SpreadOfSeams: 4
+  SpreadOfCutTargets: 3

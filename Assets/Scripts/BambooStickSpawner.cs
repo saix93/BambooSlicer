@@ -23,12 +23,12 @@ public class BambooStickSpawner : MonoBehaviour
     public float SpreadOfSeams = 4;
     public float SpreadOfCutTargets = 3;
 
-    public BambooStick SpawnBambooStick()
+    public BambooStick SpawnBambooStick(float offset)
     {
         var bambooStick = Instantiate(BambooStickPrefab, transform.position, quaternion.identity);
         
-        SpawnSideStems(-GameManager._.xOffset, bambooStick.LeavesContainer);
-        SpawnSideStems(GameManager._.xOffset, bambooStick.LeavesContainer);
+        SpawnSideStems(-offset, bambooStick.LeavesContainer);
+        SpawnSideStems(offset, bambooStick.LeavesContainer);
         SpawnBambooSeams(bambooStick.SeamsContainer);
         bambooStick.SetCutTarget(SpawnCutTarget(bambooStick.transform));
 
