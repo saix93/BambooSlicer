@@ -17,7 +17,8 @@ public enum SpawnerStatus
 public class SmallTargetSpawner : MonoBehaviour
 {
     public List<Vector2> SpawnZones;
-    public BambooStick SmallTarget;
+    public BambooStick SmallTargetPrefab;
+    public BambooStick ScrollPrefab;
     public SpawnerStatus Status = SpawnerStatus.None;
     public Vector2 RandomXForce;
     public Vector2 RandomYForce;
@@ -33,6 +34,7 @@ public class SmallTargetSpawner : MonoBehaviour
     public float fastProc;
     public float fastestTime;
     public float fastestProc;
+    public float ScrollSpawnProc = .2f;
 
     private float currentTimer;
     private AudioSource audioSource;
@@ -89,7 +91,9 @@ public class SmallTargetSpawner : MonoBehaviour
 
         if (Random.value < proc)
         {
-            var t = Instantiate(SmallTarget, GetSpawnPosition(), quaternion.identity);
+            BambooStick prefab = Random.value < ScrollSpawnProc ? ScrollPrefab : SmallTargetPrefab;
+            
+            var t = Instantiate(prefab, GetSpawnPosition(), quaternion.identity);
             t.AddRandomForce(RandomXForce, RandomYForce);
             t.AddRandomRotation(RandomTorque);
             

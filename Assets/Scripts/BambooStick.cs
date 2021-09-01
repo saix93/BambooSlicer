@@ -14,6 +14,7 @@ public class BambooStick : MonoBehaviour
 
     [Header("Small Target")]
     public bool isSmallTarget;
+    public bool isScroll;
     public CutTarget StartingCutTarget;
     
     private CutTarget cutTarget;

@@ -79,14 +79,15 @@ public class Sword : MonoBehaviour
                     }
 
                     audioSource.PlayOneShot(BambooCutSFX);
-                    var bambooStick = hit.collider.GetComponentInParent<BambooStick>();
+                    var target = hit.collider.GetComponentInParent<BambooStick>();
                     var cutTarget = hit.collider.GetComponent<CutTarget>();
-                    var accuracy = cutTarget.GetAccuracy(from, to);
+                    Score accuracy = target.isScroll ? Score.Scroll : cutTarget.GetAccuracy(@from, to);
+                    
                     var scoreTextPos = mc.WorldToScreenPoint(hit.point);
                     
-                    ScoreManager._.AddScore(accuracy, cutTimer, bambooStick.isSmallTarget, scoreTextPos);
+                    ScoreManager._.AddScore(accuracy, cutTimer, target.isSmallTarget, scoreTextPos);
 
-                    BambooHit(hit, from, to, bambooStick);
+                    BambooHit(hit, from, to, target);
                 }
                 else
                 {
