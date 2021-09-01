@@ -255,12 +255,12 @@ MonoBehaviour:
   slowTime: 4
   slowProc: 1
   mediumTime: 2
-  mediumProc: 0.8
+  mediumProc: 0.9
   fastTime: 1
   fastProc: 0.8
   fastestTime: 0.5
   fastestProc: 0.8
-  ScrollSpawnProc: 0.3
+  ScrollSpawnProc: 0.25
 --- !u!82 &281852300
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2440,7 +2440,7 @@ MonoBehaviour:
   MaxGameTime: 60
   MediumSpeedGameTime: 50
   FastSpeedGameTime: 30
-  FastestSpeedGameTime: 10
+  FastestSpeedGameTime: 15
   SmallTargetSpawner: {fileID: 281852299}
   TimeToStartTicking: 10
   ClockFadeTime: 2
